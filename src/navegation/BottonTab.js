@@ -6,6 +6,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import PokemonList from '../screens/PokemonList';
 import HomeScreen from '../screens/HomeScreen';
 import PokemonAxios from '../screens/PokemonAxios';
+import Api from '../screens/api';
 
 // Navegador Bottom Tabs Navigator
 const Tab = createBottomTabNavigator();
@@ -50,6 +51,21 @@ export default function BottomTab() {
       component={PokemonList}
       options={{
         title: 'Lista Pokemon Fetch',
+        tabBarActiveTintColor: '#3b4cca',
+        headerStyle: {
+          backgroundColor: '#3b4cca',
+        },
+        headerTintColor: '#fff',
+        tabBarIcon: ({ color }) => (
+          <Ionicons name="list" color={color} size={24} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="api"
+      component={Api}
+      options={{
+        title: 'api',
         tabBarActiveTintColor: '#3b4cca',
         headerStyle: {
           backgroundColor: '#3b4cca',
